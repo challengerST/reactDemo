@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+
+</head>
+<body>
+<div id="container"></div>
+
+
+<script type="text/babel">
+    var TestClickConmponent = React.createClass({
+        render: function () {
+            return (
+                    <div>
+                        <button>显示|隐藏</button>
+                        <span>测试点击</span>
+                    </div>
+            )
+        }
+    });
+
+    var TestInputComponent = React.createClass({
+        render: function () {
+            return (
+                    <div>
+                        <input type="text"/><span>{this.state.inputContent}</span>
+                    </div>
+            )
+        }
+    });
+
+    ReactDOM.render(
+            <div>
+                <TestClickConmponent/>
+                <br/><br/><br/>
+                <TestInputComponent/>
+            </div>
+            ,document.getElementById('container'));
+</script>
+</body>
+</html>
