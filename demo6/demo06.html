@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+
+</head>
+<body>
+<div id="container"></div>
+<script type="text/babel">
+var data = "123";
+
+    var TestPropsType = React.createClass({
+        propsType:{
+            title:React.propsType.string.isRequired,
+        },
+        render: function () {
+            return <h1>{this.props.title}</h1>
+        }
+    })
+
+    ReactDOM.render(
+            <TestPropsType title={data}/>
+
+
+            ,document.getElementById('container')
+    )
+</script>
+</body>
+</html>

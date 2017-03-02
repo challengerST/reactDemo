@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<div id="container"></div>
 
+<script type="text/babel">
+var HellOMessage = React.createClass({
+    render:function () {
+        return <h1>Hello {this.props.name}</h1>
+    }
+});
+
+    ReactDOM.render(
+            <HellOMessage name="john" />
+            ,document.getElementById('container')
+    )
+</script>
 </body>
 </html>
