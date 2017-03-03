@@ -12269,13 +12269,13 @@ var invariant = _dereq_(156);
  *   var MyComponent = React.createClass({
  *     render: function() {
  *       return (
- *         <div onClick={this.handleClick}>
+ *         <div onClick={this.handleChange}>
  *           <CustomComponent ref="custom" />
  *         </div>
  *       );
  *     },
- *     handleClick: function() {
- *       this.refs.custom.handleClick();
+ *     handleChange: function() {
+ *       this.refs.custom.handleChange();
  *     },
  *     componentDidMount: function() {
  *       this.refs.custom.initialize();
@@ -19183,7 +19183,7 @@ module.exports = performanceNow;
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * @typechecks
- * 
+ *
  */
 
 /*eslint-disable no-self-compare */
